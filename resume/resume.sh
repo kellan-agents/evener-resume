@@ -117,8 +117,12 @@ resume_pass() {
   if ! fuse_ok; then
     return 0
   fi
-  # shellcheck disable=SC1091
-  [ -n "$PROVIDER_ENV" ] && . "$PROVIDER_ENV" 2>/dev/null || log "warn: provider env not found"
+  # shellcheck source=/dev/null
+  if [ -n "$PROVIDER_ENV" ]; then
+    . "$PROVIDER_ENV" 2>/dev/null || log "warn: could not source $PROVIDER_ENV"
+  else
+    log "warn: provider env not configured"
+  fi
 
   local now sid last model row resumed=0
   now=$(date +%s)
