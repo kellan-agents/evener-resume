@@ -1,0 +1,90 @@
+{
+  "sessions": [
+    {
+      "session_id": "test-sid-2001",
+      "transcript_ref": "proj:test-bucket-0001:test-sid-2001",
+      "bucket": "test-bucket-0001",
+      "started_at": "2026-01-01T00:00:00Z",
+      "last_activity": "2026-01-01T00:10:00Z",
+      "models": [
+        "provider-a/model-x"
+      ],
+      "turn_count": 7,
+      "transcript_bytes": 100000,
+      "is_subagent": false,
+      "parent_session_id": null,
+      "delegate_count": 0,
+      "observer_count": 0,
+      "outcome": "end_turn=true"
+    },
+    {
+      "session_id": "test-sid-2002",
+      "transcript_ref": "proj:test-bucket-0001:test-sid-2002",
+      "bucket": "test-bucket-0001",
+      "started_at": "2026-01-01T00:00:00Z",
+      "last_activity": "2026-01-01T00:10:00Z",
+      "models": [
+        "provider-a/model-x"
+      ],
+      "turn_count": 12,
+      "transcript_bytes": 200000,
+      "is_subagent": false,
+      "parent_session_id": null,
+      "delegate_count": 1,
+      "observer_count": 0,
+      "outcome": "none"
+    },
+    {
+      "session_id": "test-sid-2003",
+      "transcript_ref": "proj:other-bucket-0002:test-sid-2003",
+      "bucket": "other-bucket-0002",
+      "started_at": "2026-01-01T00:00:00Z",
+      "last_activity": "2026-01-01T00:10:00Z",
+      "models": [
+        "provider-a/model-x"
+      ],
+      "turn_count": 3,
+      "transcript_bytes": 50000,
+      "is_subagent": false,
+      "parent_session_id": null,
+      "delegate_count": 0,
+      "observer_count": 0,
+      "outcome": "none"
+    },
+    {
+      "session_id": "test-sid-2004",
+      "transcript_ref": "proj:test-bucket-0001:test-sid-2004",
+      "bucket": "test-bucket-0001",
+      "started_at": "2026-01-01T00:00:00Z",
+      "last_activity": "2026-01-01T00:10:00Z",
+      "models": [
+        "model-bare"
+      ],
+      "turn_count": 2,
+      "transcript_bytes": 30000,
+      "is_subagent": false,
+      "parent_session_id": null,
+      "delegate_count": 0,
+      "observer_count": 0,
+      "outcome": "none"
+    },
+    {
+      "session_id": "test-sid-2005",
+      "transcript_ref": "proj:test-bucket-0001:test-sid-2005",
+      "bucket": "test-bucket-0001",
+      "started_at": "2026-01-01T00:00:00Z",
+      "last_activity": "2026-01-01T00:10:00Z",
+      "models": [
+        "provider-a/model-x"
+      ],
+      "turn_count": 1,
+      "transcript_bytes": 10000,
+      "is_subagent": true,
+      "parent_session_id": "test-sid-2002",
+      "delegate_count": 0,
+      "observer_count": 0,
+      "outcome": "none"
+    }
+  ],
+  "unreadable": []
+}
